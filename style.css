@@ -1,0 +1,96 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  position: absolute;
+  z-index: 999;
+  height: 925px;
+  width: 1450px;
+}
+
+#pac-man {
+  cursor: pointer;
+  z-index: 999;
+  position: absolute;
+  top: 45.5%;
+  width: 0px;
+  height: 0px;
+  margin-top: 110px;
+  border-right: 12px solid transparent;
+  border-top: 12px solid yellow;
+  border-left: 12px solid yellow;
+  border-bottom: 12px solid yellow;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  animation: bite 0.5s infinite;
+}
+
+#pac-man.run {
+  animation: bite 0.5s infinite, run-maze 2s linear;
+}
+
+@keyframes run-maze {
+  0% {
+  transform: translate(000px, 0px);
+  
+  }
+
+  15% {
+    transform: translate(500px, 0px);
+  }
+
+  30% {
+    transform: translate(500px, 90px);
+  }
+
+  40% {
+    transform: translate(950px, 90px);
+  }
+
+  55% {
+    transform: translate(950px, 0px);
+  }
+
+  100% {
+    transform: translate(2000px, 0px);
+  }
+
+}
+
+@keyframes bite {
+  50% {
+    border-right: 12px solid transparent;
+    border-top: 12px solid yellow;
+    border-left: 12px solid yellow;
+    border-bottom: 12px solid yellow;
+  }
+
+  51% {
+    border-right: 12px solid yellow;
+    border-top: 12px solid yellow;
+    border-left: 12px solid yellow;
+    border-bottom: 12px solid yellow;
+  }
+
+  99% {
+    border-right: 12px solid yellow;
+    border-top: 12px solid yellow;
+    border-left: 12px solid yellow;
+    border-bottom: 12px solid yellow;
+  }
+
+  100% {
+    border-right: 12px solid transparent;
+    border-top: 12px solid yellow;
+    border-left: 12px solid yellow;
+    border-bottom: 12px solid yellow;
+  }
+
+}
